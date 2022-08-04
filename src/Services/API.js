@@ -6,15 +6,17 @@ const api = axios.create({
   },
 });
 
-export const getEmail = async () => {
+export const getClientes = async () => {
   try {
     const response = await api.get("/clientes");
-    const email = await response.data.EMAIL;
-    return email;
+    const clientes = await response.data;
+    
+    return clientes;
   } catch (erro) {
     console.log(erro);
   }
 };
+
 export const getPassword = async () => {
   try {
     const response = await api.get("/clientes");

@@ -7,8 +7,8 @@ const Login = () => {
   return (
     <div>
       <User/>
-      <Password/>
-      <Link to='../ClientArea' />
+      {/* <Password/>
+      <Link to='../ClientArea' /> */}
     </div>
   )
 }
