@@ -18,6 +18,7 @@ const Routes = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/clientArea/:id' element={<Profile />} />
         <Route path='/films' element={<Films />} />
+
       </Switch>
     </BrowserRouter>
   )

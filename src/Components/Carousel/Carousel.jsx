@@ -1,39 +1,65 @@
+import React from "react";
+import { getFilmes } from "../../Services/API.js";
+import { useParams } from "react-router-dom";
+import { useEffect, useState, useRef } from 'react';
+import  './Carousel.css'
 
-import React, { useEffect, useState } from 'react'
-import api from '../../API/api';
-import S from './Carousel.module.css'
+import { func } from "prop-types";
+import CardFilme from "../Card/CardFilme.jsx";
 
-const Carousel = () => {
+const Teste = () => {
+  const carousel = useRef(null);
+  const [produtos, setProdutos] = useState([]);
+  useEffect(() => {
+    const request = async () => {
+      const response = await getFilmes();
+      console.log(response);
+      setProdutos(response);
+    };
+    request();
+  }, []);
+  const handleLeftClick = (e) => {
+    e.preventDefault();
+    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+  };
 
-    const [filmData, setFilmData] = useState({});
+  const handleRightClick = (e) => {
+    e.preventDefault();
 
-    useEffect(() => {
-        handleGetFilmData();
-    }, []);
+    carousel.current.scrollLeft += carousel.current.offsetWidth;
+  };
 
-    async function handleGetFilmData () {
-        const response = await fetch('https://api.themoviedb.org/3/keyword/158718/movies?api_key=79d5524a687b79f90d3ca38d4644f9d6&language=pt-BR&include_adult=true');
-        const data = await response.json();
-        setFilmData(data);
-        console.log(data)
-    }
-
+  if (!produtos || !produtos.length) return null;
 
   return (
-    <div className='container'>
-        <div className='carousel'>
-            <div className='item'>
-                <div className='image'>
-                    <img src="" alt="" />
-                </div>
-                <div className='tilte'></div>
-                <div className='btn'>
-                <button>Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
+    <div className="container">
+      <div className="carousel" ref={carousel}>
+        {produtos.map((item) => {
+          const { id, title, release_date,vote_average, poster_path, overview} = item;
+          return (
+            <CardFilme
+            id = {id}
+            nomeDoFilme = {title} 
+            anoLancamento = {release_date.split("-").slice(0,1)} 
+            urlCartaz = {poster_path} 
+            notas = {vote_average}
+            descricaoDoFilme= {overview}
+            details={(e)=>{e.preventDefault(); alert("oi")}}
+            />
+          );
+        })}
+      </div>
+      <div className="buttons">
+        <button onClick={handleLeftClick}>
+          ESQUERDA
+        </button>
+        <button onClick={handleRightClick}>
+          DIREITA
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Teste;
+
