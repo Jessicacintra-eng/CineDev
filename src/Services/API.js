@@ -1,41 +1,45 @@
 import axios from "axios";
+
 const api = axios.create({
-  baseURL: "https://cinedevjessica.herokuapp.com/",
+  baseURL: "https://cinediva.herokuapp.com",
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-export const getEmail = async () => {
+export const getAssinaturas = async (id) => {
   try {
-    const response = await api.get("/clientes");
-    const email = await response.data.EMAIL;
-    return email;
-  } catch (erro) {
-    console.log(erro);
+    const response = await api.get(`/assinaturas/${id}`)
+    const json = await response.data[0]
+    return json
+
+  } catch (error) {
+    console.log(error);
+    return error
+  }
+}
+
+export const adicionaAssinaturas = async (data) => {
+  try {
+    return await api.post('/assinaturas/novaAssinatura', data)
+  } catch (error) {
+    
+    console.log(error);
+    return error
   }
 };
-export const getPassword = async () => {
+
+export const alteraAssianturas = async (id, body) => {
   try {
-    const response = await api.get("/clientes");
-    const senha = await response.data.PASSWORD;
-    return senha;
-  } catch (erro) {
-    console.log(erro);
+    const resposta = await api.put(`/assinaturas/${id}`, body)
+    const json = await resposta.data.sign
+    console.log(json);
+    return json
+
+  } catch (error) {
+    console.log(error);
+    return error
   }
 };
-export const putNewClient = async () => {
-  try {
-    const response = await api.put("/clientes", {
-      NAME: 'USUARIO TESTE',
-      EMAIL: 'USUARIO@TESTE',
-      PASSWORD: '12345',
-      PAYMENT:'100,00',
-      CLUB:'NO'
-  });
-  return response.data
-  } catch (erro) {
-    console.log(erro);
-  }
-};
+
 
