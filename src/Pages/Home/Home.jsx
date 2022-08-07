@@ -1,32 +1,36 @@
-import React, {useState} from 'react'
-import Button from '../../Components/Button/Button'
-import {Link} from 'react-router-dom'
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo.svg";
+import Ticket from "../../assets/Entrar.svg";
+import s from "./Home.module.css";
+
+
 import Animacao from '../../Components/Animacao/Animacao'
 import { useEffect } from 'react'
 
 const Home = () => {
+  return (
+    <section>
+    <section className={s.stars}>
+    </section>
+      <section className={s.home}>
+        <img src={Logo} className={s.logo} alt="" />
+          <Link to="../Login" className={s.LinkLogin}>
+            <img src={Ticket} className={s.imageTicket} alt="" />
+            <p className={s.textTickets}>
+            Login
+            </p>
+          </Link>
 
-  // Remove a animação do home
-  const [removeLoading, setRemoveLoading] = useState(false)
+          <Link to="../Register" className={s.LinkCadastrar}>
+            <img src={Ticket} className={s.imageTicket} alt="" />
+            <p className={s.textTickets}>
+            Cadastre-se
+            </p>
+          </Link>
+      </section>
+    </section>
+  );
+};
 
-  //Configuração do tempo
-  useEffect(() => {
-   setTimeout(() => {
-      setRemoveLoading(true)
-   }, 5000) 
-  })
-
-  return(
-      <div>
-
-        {/* Condicional para que apareça na tela */}
-        {!removeLoading && <Animacao />}
-
-        <h1>CINEDEV</h1>
-        <Button text="Login" onClick={<Link to='../Login/Login.jsx'/>}/>
-        <Button text="Registrar"onClick={<Link to='../Register/Register.jsx'/>}/>
-      </div>
-  ) 
-}
-
-export default Home
+export default Home;

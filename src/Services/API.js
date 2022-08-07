@@ -4,6 +4,7 @@ const api = axios.create({
   baseURL: "https://cinediva.herokuapp.com",
   headers: {
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": 'true'
   },
 });
 
