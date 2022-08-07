@@ -5,10 +5,22 @@ import { useParams } from 'react-router-dom'
 import { alteraAssianturas } from '../../../Services/API'
 import { getAssinaturas } from '../../../Services/API'
 
+import S from './AlterarDados.module.css'
+
 const AlteraDadosAssinaturas = () => {
   
   const { id } = useParams()
-  const [dadosAntigos, setDadosAntigos] = useState({})
+  const [dadosAntigos, setDadosAntigos] = useState({
+        cliente: '',
+        email: '',
+        senha: '',
+        planos: '',
+  })
+
+  const [status, setStatus] = useState({
+    type: '',
+    mensagem: ''
+  })
 
   const getDadosUsuario = async () => {
     const dados = await getAssinaturas(id)
@@ -23,9 +35,16 @@ const AlteraDadosAssinaturas = () => {
     setDadosAntigos({...dadosAntigos, [key]: e.target.value})
   }
 
-  const requisicao = () => {
-    console.log(id, dadosAntigos);
-    alteraAssianturas(id, dadosAntigos)
+  const requisicao = async (e) => {
+    e.preventDefault()
+    const response = await alteraAssianturas(id, dadosAntigos)
+
+    if(response){
+      setStatus({
+        type: 'sucess',
+        mensagem: 'Dados alterados com sucesso!'
+      })
+    }
   }
 
   return (
@@ -41,6 +60,9 @@ const AlteraDadosAssinaturas = () => {
         <input type="text" name="planos" id="planos" value={dadosAntigos.planos} placeholder={dadosAntigos.planos} onChange={(e) => handleInputChange(e , "planos")} />
 
         <button onClick={requisicao}>Alterar dados</button>
+
+        {status.type === 'sucess'? <p className={S.mensagemSucesso}>{status.mensagem}</p> : ''}
+
       </form>
       
     </div>

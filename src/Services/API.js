@@ -31,10 +31,7 @@ export const adicionaAssinaturas = async (data) => {
 
 export const alteraAssianturas = async (id, body) => {
   try {
-    const resposta = await api.put(`/assinaturas/${id}`, body)
-    const json = await resposta.data.sign
-    console.log(json);
-    return json
+    return await api.put(`/assinaturas/${id}`, body)
 
   } catch (error) {
     console.log(error);
