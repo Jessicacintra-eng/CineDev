@@ -1,12 +1,9 @@
 import React from 'react'
 import AlteraDadosAssinaturas from '../../Components/CrudAssinaturas/alterarDados/AlteraDadosAssinaturas'
-// import Header from '../../Components/Header/Header'
 
 const ClientArea = () => {
   return (
-    <div>
-      {/* <Header/> */}
-      
+    <div>     
       <h1>Alterar conta</h1>
       <AlteraDadosAssinaturas />
     </div>
