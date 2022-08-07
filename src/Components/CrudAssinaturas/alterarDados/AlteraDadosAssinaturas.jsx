@@ -48,18 +48,18 @@ const AlteraDadosAssinaturas = () => {
   }
 
   return (
-    <div>
+    <div className={S.container}>
 
-      <form>
-        <input type="text" name="cliente" id="cliente" value={dadosAntigos.cliente} placeholder={dadosAntigos.cliente} onChange={(e) => handleInputChange(e , "cliente")} />
+      <form className={S.form}>
+        <input type="text" name="cliente" id="cliente" value={dadosAntigos.cliente} placeholder={dadosAntigos.cliente} onChange={(e) => handleInputChange(e , "cliente")} className={S.input} />
 
-        <input type="email" name="EMAIL" id="email" value={dadosAntigos.email} placeholder={dadosAntigos.email} onChange={(e) => handleInputChange(e , "email")} />
+        <input type="email" name="EMAIL" id="email" value={dadosAntigos.email} placeholder={dadosAntigos.email} onChange={(e) => handleInputChange(e , "email")} className={S.input} />
 
-        <input type="password" name="senha" id="senha" value={dadosAntigos.senha} placeholder={dadosAntigos.senha} onChange={(e) => handleInputChange(e , "senha")} />
+        <input type="password" name="senha" id="senha" value={dadosAntigos.senha} placeholder={dadosAntigos.senha} onChange={(e) => handleInputChange(e , "senha")} className={S.input} />
 
-        <input type="text" name="planos" id="planos" value={dadosAntigos.planos} placeholder={dadosAntigos.planos} onChange={(e) => handleInputChange(e , "planos")} />
+        <input type="text" name="planos" id="planos" value={dadosAntigos.planos} placeholder={dadosAntigos.planos} onChange={(e) => handleInputChange(e , "planos")} className={S.input} />
 
-        <button onClick={requisicao}>Alterar dados</button>
+        <button onClick={requisicao} className={S.alterar}>Alterar dados</button>
 
         {status.type === 'sucess'? <p className={S.mensagemSucesso}>{status.mensagem}</p> : ''}
 

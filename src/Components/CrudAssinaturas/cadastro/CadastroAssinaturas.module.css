@@ -39,8 +39,10 @@
     justify-content: center;
     justify-items: center;
     
-    background-color: white;
-    border-radius: 37px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .input{
