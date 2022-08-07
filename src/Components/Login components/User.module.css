@@ -1,0 +1,170 @@
+.imagemClaquete{
+  position: absolute;
+  top: 80px;
+  width: 500px;
+  height: 400px;
+  z-index: 0;
+}
+.divEmail{
+  position: relative;
+  top: 140px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+.divSenha{
+  position: relative;
+  top: 172px;
+  left: 40px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.input{
+  font-size: medium;
+  width: 320px;
+  height: 25px;
+  padding-inline-start: 8px;
+  align-content: center;
+  border-radius: 8px;
+
+}
+.btnEntrar{
+  position: relative;
+  top: 200px;
+  left: 150px;
+  display: flex;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+
+}
+.LinkRegistrar{
+  position: relative;
+  top: 205px;
+  right: -305px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.LinkRegistrarI{
+  color: azure;
+  text-decoration: none;
+  text-align: center; 
+}
+.textLinKRegister{
+  color: azure;
+  text-decoration: none;
+  text-align: center; 
+}
+.LinkSenha:hover,.textLinKRegister:hover{
+  text-shadow: 1px 1px 1px red;
+  color: gold;
+}
+.LinkSenha{
+  position: relative;
+  top: 230px;
+  right: -90px;
+  display: flex;
+  cursor: pointer;
+  background-color: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+}
+
+
+/* CSS */
+.button85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: medium;
+  align-self: center;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(109, 109, 109);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
