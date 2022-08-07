@@ -38,9 +38,10 @@ const User = () => {
           return idAutenticado;
         }
       });
+      // window.location.href=`/clientArea/${idAutenticado}`
     console.log(x);
     x.length > 0
-      ?  window.location.href=`/clientArea/${idAutenticado}`
+      ?  window.location.href=`/films`
       : alert("Email ou senha não cadastrados");
   }
 
