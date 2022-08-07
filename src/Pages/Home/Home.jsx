@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Ticket from "../../assets/Entrar.svg";
 import s from "./Home.module.css";
 
+
+import Animacao from '../../Components/Animacao/Animacao'
+import { useEffect } from 'react'
 
 const Home = () => {
   return (
