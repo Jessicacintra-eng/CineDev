@@ -50,20 +50,6 @@
   color: #00a8fb;
 }
 
-.container .carousel .item .info .oldPrice {
-  font-size: 0.8rem;
-  text-decoration: line-through;
-  flex-grow: 1;
-  color: #e81a5d;
-}
-
-.container .carousel .item .info .price {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #ff7e3b;
-}
-
 .container .buttons {
   width: 30%;
   text-align: center;

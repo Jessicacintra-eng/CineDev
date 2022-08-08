@@ -1,4 +1,24 @@
+.paginaFilmes{
+    max-width: 100%;
+}
 
+.buscarFilme{
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+.buttonBuscar{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.inputBuscar{
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+}
 @keyframes neon {
     from {
         filter: drop-shadow(0 0 0 var(--cor-neon))
@@ -8,22 +28,24 @@
     }
 }
 
-section img{
+.brilho img{
     animation: neon 2s alternate infinite ease-in-out;
 }
 
-section img{
-    --cor-neon: #ff3366;
+.brilho img{
+    --cor-neon: #f42d9a;
 }
 
-section{
+.brilho{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-section img{
+.brilho img{
     height: 100%;
     width: 230px;
 }
+
+
