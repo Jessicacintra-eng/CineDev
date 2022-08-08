@@ -2,18 +2,20 @@
   background-color: white;
   margin: 10px;
   padding: 10px;
-  width: 280px;
+  width: 230px;
   border-radius: 16px;
   flex: none;
 }
 .card .image img{
-  width: 250px;
-  height: 450px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
 }
+
 img{
-  width: 250px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
+  margin-left: 5px
 }
 .card .info{
   height: 140px;
@@ -32,10 +34,42 @@ img{
   font-weight: bold;
   margin: 10px 0;
   color: #00a8fb;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card .info .btn {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #ff7e3b;
+
+.card span img {
+  height: 3vh;
+  width: 3vh;
+}
+
+.card .notes{
+  background: blue;
+}
+
+.btn{
+  margin: 10px;
+  text-align: center;
+}
+
+.card button{
+   border:none;
+   padding: 8px;
+   font-size: 15px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+   border-radius: 10px;
+   position: relative;
+   box-sizing: border-box;
+   cursor: pointer;
+   transition: all 400ms ease;
+   background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));   
+}
+
+button:hover{
+  background: #e64cb83f;
+  color: aquamarine;
+  box-shadow: inset 0 0 0 3px #030303;
 }

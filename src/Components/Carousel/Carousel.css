@@ -1,5 +1,7 @@
 .container {
-  max-width: 75vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 .container .carousel {
   display: flex;
@@ -63,15 +65,18 @@
 }
 
 .container .buttons {
-  width: 100%;
+  width: 30%;
   text-align: center;
 }
 .container .buttons button {
-  background-color: red;
+  background-color: transparent;
   border: none;
-  margin: 0 55px;
+ 
   cursor: pointer;
 }
-.container .buttons button:first-child img {
-  transform: rotate(180deg);
+
+
+.container .buttons img {
+  height: 9vh;
+  width: 16vh;
 }

@@ -33,6 +33,11 @@ const Teste = () => {
 
   return (
     <div className="container">
+       <div className="buttons 1">
+       <button onClick={handleLeftClick}>
+          <img className="seta" src="https://mcusercontent.com/8d01a411f692a38c571bf7140/images/c7f63a96-f6d4-218d-d436-763fb43f5f7e.png" alt="" srcset="" />
+        </button>
+        </div>
       <div className="carousel" ref={carousel}>
         {produtos.map((item) => {
           const { id, title, release_date,vote_average, poster_path, overview} = item;
@@ -49,12 +54,9 @@ const Teste = () => {
           );
         })}
       </div>
-      <div className="buttons">
-        <button onClick={handleLeftClick}>
-          ESQUERDA
-        </button>
+      <div className="buttons 2">
         <button onClick={handleRightClick}>
-          DIREITA
+          <img className="seta" src="https://mcusercontent.com/8d01a411f692a38c571bf7140/images/555afc6c-5df7-092b-0b5d-658267be9b88.png" />
         </button>
       </div>
     </div>
