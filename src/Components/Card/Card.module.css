@@ -1,5 +1,5 @@
 .card{
-  background-color: white;
+  background-color: transparent;
   margin: 10px;
   padding: 10px;
   width: 230px;
@@ -46,17 +46,20 @@ img{
   width: 3vh;
 }
 
-.card .notes{
-  background: blue;
+.botaoDiv{
+  display:flex;
+  justify-content: center;
 }
 
 .btn{
   margin: 10px;
   text-align: center;
+  width: 90px;
 }
 
 .card button{
    border:none;
+   color: white;
    padding: 8px;
    font-size: 15px;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
@@ -70,6 +73,11 @@ img{
 
 button:hover{
   background: rgb(241, 68, 129);
-  color: rgb(20, 23, 22);
+  color: rgb(1, 20, 15);
   box-shadow: inset 0 0 0 3px #030303;
+}
+
+.notes{
+  background-color: white;
+
 }

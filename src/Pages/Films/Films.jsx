@@ -14,7 +14,8 @@ const Films = () => {
       </section>
       <div class={s.buscarFilme}>
         <form>
-            <input type="text" placeholder='Buscar um filme' className={s.inputBuscar} />
+          <p> Buscar Filme </p>
+            <input type="text" placeholder='' className={s.inputBuscar} />
           <button type='sumbit' className={s.buttonBuscar}> <BiSearchAlt/> </button>
        
         </form>
