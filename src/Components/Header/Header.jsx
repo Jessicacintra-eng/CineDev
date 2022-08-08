@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom'
 import S from './Header.module.css'
-import logotipo from '../../assets/imgCadastro/Logo.svg'
+import logotipo from '../../assets/imgCadastro/Logo2.svg'
 import user from '../../assets/iconheader/user1.png'
 import seta from '../../assets/iconheader/seta.png'
 import logout from '../../assets/iconheader/log-out.png'
