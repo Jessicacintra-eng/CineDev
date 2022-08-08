@@ -37,11 +37,10 @@ const User = () => {
           idAutenticado= cliente.id
           return idAutenticado;
         }
-      });
-      // window.location.href=`/clientArea/${idAutenticado}`
+      })
     console.log(x);
     x.length > 0
-      ?  window.location.href=`/films`
+      ?  window.location.href=`/films/${idAutenticado}`
       : alert("Email ou senha não cadastrados");
   }
 

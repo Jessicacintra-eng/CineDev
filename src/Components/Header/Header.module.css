@@ -64,7 +64,10 @@ li{
     justify-content: center;
     background-color: rgba(226, 214, 222, 0.5);
 }
-
+.user{
+    width: 60px;
+    height: 60px;
+}
 .contCirAndImg{
     width: 50px;
     height: 60px;

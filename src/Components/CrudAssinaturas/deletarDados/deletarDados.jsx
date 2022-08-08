@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { alteraAssianturas } from '../../../Services/API'
+import { deletarCliente } from '../../../Services/API'
 import { getAssinaturas } from '../../../Services/API'
 
 import S from './AlterarDados.module.css'
 
-const AlteraDadosAssinaturas = () => {
+const DeletarDados = () => {
   
   const { id } = useParams()
   const [dadosAntigos, setDadosAntigos] = useState({
@@ -60,7 +60,6 @@ const AlteraDadosAssinaturas = () => {
         <input type="text" name="planos" id="planos" value={dadosAntigos.planos} placeholder={dadosAntigos.planos} onChange={(e) => handleInputChange(e , "planos")} className={S.input} />
 
         <button onClick={requisicao} className={S.alterar}>Alterar dados</button>
-        
 
         {status.type === 'sucess'? <p className={S.mensagemSucesso}>{status.mensagem}</p> : ''}
 
@@ -70,4 +69,4 @@ const AlteraDadosAssinaturas = () => {
   )
 
 }
-export default AlteraDadosAssinaturas
+export default DeletarDados

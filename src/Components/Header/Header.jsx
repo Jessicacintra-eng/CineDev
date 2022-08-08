@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom'
-
 import S from './Header.module.css'
 import logotipo from '../../assets/imgCadastro/Logo.svg'
 import user from '../../assets/iconheader/user1.png'
@@ -8,15 +7,17 @@ import seta from '../../assets/iconheader/seta.png'
 import logout from '../../assets/iconheader/log-out.png'
 
 const Header = () => {
-
+  const { id } = useParams()
   return (
     <div className={S.container}>
         <div className={S.contLogo}><img className={S.logotipo} src={logotipo} alt="logotipo" /></div>
 
         <ul className={S.containerLista}>
+          <Link to={`/films/${id}`}>
           <li className={S.li}>FILMES</li>
+          </Link>
           <li>SÉRIES</li>
-          <li>ANIMAÇÕES</li>
+          {/* <li>ANIMAÇÕES</li> */}
         </ul>
 
         <div className={S.containerUser}>

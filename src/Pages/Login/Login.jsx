@@ -3,8 +3,6 @@ import User from "../../Components/Login components/User";
 import s from "./Login.module.css";
 import Drag from "../../assets/dragbravo.svg";
 
-
-
 const Login = () => {
   return (
       <div className={s.Login}>
