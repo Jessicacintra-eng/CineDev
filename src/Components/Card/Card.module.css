@@ -69,7 +69,7 @@ img{
 }
 
 button:hover{
-  background: #e64cb83f;
-  color: aquamarine;
+  background: rgb(241, 68, 129);
+  color: rgb(20, 23, 22);
   box-shadow: inset 0 0 0 3px #030303;
 }
