@@ -4,10 +4,16 @@ import Carousel from '../../Components/Carousel/Carousel'
 
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
+import { getAssinaturas } from '../../Services/API'
 
 
 const Films = () => {
   const { id } = useParams()
+
+  
+  useEffect(() => {
+    const dados = await getAssinaturas(id)
+  }, [id])
   return (
     <section className={s.paginaFilmes}>
       <section className={s.fundoPontilhado}></section>
