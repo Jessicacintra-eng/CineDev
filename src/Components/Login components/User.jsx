@@ -40,7 +40,7 @@ const User = () => {
       })
     console.log(x);
     x.length > 0
-      ?  window.location.href=`/films/${idAutenticado}`
+      ?  window.location.href=`/films`
       : alert("Email ou senha não cadastrados");
   }
 
