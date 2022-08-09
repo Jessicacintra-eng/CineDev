@@ -9,10 +9,13 @@ import { getAssinaturas } from '../../Services/API'
 
 const Films = () => {
   const { id } = useParams()
-
+ 
+  const getDadosUsuario = async () => {
+    const dados = await getAssinaturas(id)
+  }
   
   useEffect(() => {
-    const dados = await getAssinaturas(id)
+    getDadosUsuario()
   }, [id])
   return (
     <section className={s.paginaFilmes}>
