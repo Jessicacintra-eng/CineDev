@@ -5,6 +5,7 @@ import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
 import Profile from './Pages/ClientArea/ClientArea'
 import Films from './Pages/Films/Films'
+import Planos from './Pages/Planos/Planos'
 
 const Routes = () => {
   return (
@@ -13,6 +14,7 @@ const Routes = () => {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
+        <Route path='/planos/:id' element={<Planos />} />
         <Route path='/clientArea/:id' element={<Profile />} />
         <Route path='/films/:id' element={<Films/>}/>
       </Switch>

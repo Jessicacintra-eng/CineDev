@@ -1,0 +1,94 @@
+.cards{
+  width: 65%;
+  height: 450px;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 62px 4px 62px 63px 142px 87px;
+  grid-template-columns: auto;
+
+  color: black;
+  background-color: #f1eff1;
+  border-radius: 20px;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  transition: transform 1s;
+  
+}
+
+.cards:hover{
+  transform: scale(1.1);
+  filter: brightness(1.1)
+}
+
+.titulo{
+  text-align: center;
+  font-size: 38px;
+}
+
+small{
+  margin-left: 20px;
+}
+
+.valor{
+  text-align: center;
+  font-size: 44px;
+  background-image: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+ul{
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 30px 20px 30px;
+  gap: 10px;
+}
+
+li{
+  color: black;
+  font-size: 15px;
+}
+
+.linha{
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+  border: 0px;
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+
+  animation: colors 1s ease infinite;
+  background-size: 300% 300%;
+  transition: filter 300ms;
+}
+
+@keyframes colors {
+  0%{
+      background-position: 0% 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
+input:hover{
+  filter: brightness(1.3)
+}
+

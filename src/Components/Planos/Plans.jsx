@@ -1,26 +1,28 @@
 import React from "react";
-import Card from "../Card/Card";
-import { LoremIpsum } from "react-lorem-ipsum";
-import s from './Plans.modules.css'
+import { Link, useParams } from 'react-router-dom'
+import s from './Plans.module.css'
 
-const Plans = () => {
+
+const Plans = (props) => {
+ 
+  const { id } = useParams()
+
   return (
     <section className={s.cards}>
-      <Card
-        nomeDoPlano={"Free"}
-        descricaoDoPlano={<LoremIpsum p={1} />}
-        link={"/register"}
-      />
-       <Card
-        nomeDoPlano={"Single"}
-        descricaoDoPlano={<LoremIpsum p={1} />}
-        link={"/register"}
-      />
-       <Card
-        nomeDoPlano={"Family"}
-        descricaoDoPlano={<LoremIpsum p={1} />}
-        link={"/register"}
-      />
+        <h1 className={s.titulo}>{props.tipo}</h1>
+        <div className={s.linha1}></div>
+        <small>Por:</small>
+        <h2 className={s.valor}>{props.valor}</h2>
+
+        <ul>
+            <li>🔥 {props.beneficio1}</li>
+            <div className={s.linha}></div>
+            <li>✨ {props.beneficio2}</li>
+        </ul>
+
+        <div className={s.contButton}>
+          <Link to={`/films/${id}`}><input type="button" value="Quero esse!" /></Link>
+        </div>
     </section>
   );
 };

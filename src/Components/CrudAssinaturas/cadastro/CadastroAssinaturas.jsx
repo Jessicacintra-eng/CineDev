@@ -1,11 +1,10 @@
 import React, { useState }  from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { getClientes } from '../../../Services/API'
 import {adicionaAssinaturas} from '../../../Services/API'
 import S from './CadastroAssinaturas.module.css'
 
 const FormCadastroAssinaturas = () => {
-
-    const navigate = useNavigate()
 
     const [client, setCliente] = useState({
         cliente: '',
@@ -26,8 +25,10 @@ const FormCadastroAssinaturas = () => {
         setCliente({...client, [key]: e.target.value})
     }
 
-    const handleInputPlanos = () => {
-      navigate('/')
+    const handleInputPlanos = async () => {
+      const clientes = await getClientes()
+      const user = clientes[clientes.length-1]
+      window.location.href=`/planos/${user.id}`
     }
         
     const requisicao = async e => {
@@ -43,7 +44,7 @@ const FormCadastroAssinaturas = () => {
       })
 
       const response = await adicionaAssinaturas(client)
-      
+
       if(response){
         setStatus({
             type:'success',
@@ -93,7 +94,7 @@ const FormCadastroAssinaturas = () => {
     <div className={S.containerForm}>
         { acesso ? (
             <div className={S.sucessoCadastro}>
-              <h1>Parabéns! Você foi cadastrad@. Agora clique o botão para escolher seu plano :D </h1>
+              <h1 className={S.textSucesso}>Parabéns! Você foi cadastrad@. Agora clique o botão para escolher seu plano :D </h1>
               <input className={S.enviar} type="button" value="Escolher meu plano" onClick={handleInputPlanos}/>   
             </div>
         ) : (
