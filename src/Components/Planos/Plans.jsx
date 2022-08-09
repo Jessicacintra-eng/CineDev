@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useParams } from 'react-router-dom'
 import s from './Plans.module.css'
 
-
 const Plans = (props) => {
  
   const { id } = useParams()

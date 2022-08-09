@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getClientes } from "../../Services/API.js";
 import Button from "../Button/Button.jsx";
 import s from "./User.module.css";
@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import Claquete from "../../assets/Claquete.svg";
 
 const User = () => {
+  const navigate = useNavigate()
+
   const [DadosLogin, setDadosLogin] = useState({
     Email: "",
     Senha: "",
@@ -40,7 +42,7 @@ const User = () => {
       })
     console.log(x);
     x.length > 0
-      ?  window.location.href=`/films/${idAutenticado}`
+      ?  navigate(`/films/${idAutenticado}`)
       : alert("Email ou senha não cadastrados");
   }
 
