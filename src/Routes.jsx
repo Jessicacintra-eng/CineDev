@@ -16,7 +16,7 @@ const Routes = () => {
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/planos/:id' element={<Planos />} />
         <Route path='/clientArea/:id' element={<Profile />} />
-        <Route path='/films/:id' element={<Films/>}/>
+        <Route path='/films' element={<Films/>}/>
       </Switch>
     </BrowserRouter>
   )
