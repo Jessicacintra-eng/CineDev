@@ -32,6 +32,12 @@ div{
     justify-items: center;
 }
 
-
+@media(min-width: 200px) and (max-width: 1000px){
+    .containerCard{
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        gap: 15px;
+    }
+}
 
 
