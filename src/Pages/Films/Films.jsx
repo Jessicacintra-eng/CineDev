@@ -8,8 +8,8 @@ const Films = () => {
     <section className={s.paginaFilmes}>
       <section className={s.fundoPontilhado}></section>
       <section className={s.brilho}>
-        <div>
-          <img className="texto" src="https://mcusercontent.com/8d01a411f692a38c571bf7140/images/054194ff-4a77-9887-fddc-82447b278dd3.png" />
+        <div className={s.texto}>
+          <img className={s.outdoor} src="https://mcusercontent.com/8d01a411f692a38c571bf7140/images/c71563f4-aba6-f3de-f2ca-3a5ff2c69f0b.png" />
         </div>
       </section>
       <div class={s.buscarFilme}>

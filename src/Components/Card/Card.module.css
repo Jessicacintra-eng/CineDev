@@ -6,16 +6,16 @@
   border-radius: 16px;
   flex: none;
 }
-.card .image img{
+.image > img{
   width: 200px;
   height: 300px;
   object-fit: cover;
+  margin-left: 5px
 }
 
 img{
   width: 200px;
   height: 300px;
-  margin-left: 5px
 }
 .card .info{
   height: 140px;
@@ -73,11 +73,21 @@ img{
 
 button:hover{
   background: rgb(241, 68, 129);
-  color: rgb(1, 20, 15);
+  color: rgb(196, 215, 210);
   box-shadow: inset 0 0 0 3px #030303;
 }
 
 .notes{
   background-color: white;
 
+}
+
+.outdoor img {
+  width: 100%;
+  height: 150px;
+}
+
+.texto {
+  width:100%;
+  height: 150px;
 }
