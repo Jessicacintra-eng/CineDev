@@ -1,10 +1,12 @@
 import React, { useState }  from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { getClientes } from '../../../Services/API'
 import {adicionaAssinaturas} from '../../../Services/API'
 import S from './CadastroAssinaturas.module.css'
 
 const FormCadastroAssinaturas = () => {
+
+    const navigate = useNavigate()
 
     const [client, setCliente] = useState({
         cliente: '',
@@ -28,7 +30,7 @@ const FormCadastroAssinaturas = () => {
     const handleInputPlanos = async () => {
       const clientes = await getClientes()
       const user = clientes[clientes.length-1]
-      window.location.href=`/planos/${user.id}`
+      navigate(`/planos/${user.id}`)
     }
         
     const requisicao = async e => {
