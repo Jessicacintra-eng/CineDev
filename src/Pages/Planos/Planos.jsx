@@ -12,10 +12,10 @@ const Planos = () => {
       </div>
 
       <div className={S.conTitulo}>
-        <h1>PLANOS</h1>
+        <h1 className={S.titulo}>PLANOS</h1>
       </div>
 
-      <section>
+      <section className={S.containerCard}>
         
           <Plans className={S.plans} tipo='Free' valor='R$0,00' beneficio1='Uma tela' beneficio2='Max resolução: 720px' />
           <Plans className={S.plans} tipo='Single' valor='R$99,00' beneficio1='Uma tela' beneficio2='Max resolução: 1080px' />

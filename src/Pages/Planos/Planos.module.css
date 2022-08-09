@@ -20,11 +20,11 @@ div{
     justify-items: center;
 }
 
-h1{
+.titulo{
     font-size: 50px;
 }
 
-section{
+.containerCard{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto auto auto;
