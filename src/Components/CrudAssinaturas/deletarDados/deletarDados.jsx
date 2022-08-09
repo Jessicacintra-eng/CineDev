@@ -1,69 +1,123 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-
+import { useNavigate, useParams } from "react-router-dom";
+import S from './deletarDados.module.css'
 import { deletarCliente } from '../../../Services/API'
-import { getAssinaturas } from '../../../Services/API'
+import Modal from 'react-modal';
 
-import S from './AlterarDados.module.css'
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+Modal.setAppElement('#root');
 
 const DeletarDados = () => {
+  const navigate = useNavigate()
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [SashayIsOpen, setSashay] = useState(false);
+  const [ShantayIsOpen, setShantay] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+  function openSashay(){
+    setSashay(true);
+  }
+  function openShantay(){
+    setIsOpen(false);
+    setShantay(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+    setShantay(false);
+  }
+  function closeModalAndStay(){
+    setShantay(true);
+  }
   
   const { id } = useParams()
-  const [dadosAntigos, setDadosAntigos] = useState({
-        cliente: '',
-        email: '',
-        senha: '',
-        planos: '',
-  })
 
   const [status, setStatus] = useState({
     type: '',
     mensagem: ''
   })
-
-  const getDadosUsuario = async () => {
-    const dados = await getAssinaturas(id)
-    setDadosAntigos(dados)
-  }
   
-  useEffect(() => {
-    getDadosUsuario()
-  }, [])
-
-  const handleInputChange = (e, key) => {
-    setDadosAntigos({...dadosAntigos, [key]: e.target.value})
-  }
-
-  const requisicao = async (e) => {
-    e.preventDefault()
-    const response = await alteraAssianturas(id, dadosAntigos)
+  const requisicao = async () => {
+    const response = await deletarCliente(id)
 
     if(response){
       setStatus({
         type: 'sucess',
-        mensagem: 'Dados alterados com sucesso!'
+        mensagem: 'Conta deletada com com sucesso!'
       })
     }
   }
+  const closeModalAndGoHome = ()=>{
+    // requisicao()
+    setIsOpen(false);
+    openSashay(true)
+    // setTimeout(()=>{
+    //   navigate(`/`)
+    // },[2000])  
+  }
 
   return (
-    <div className={S.container}>
+    <div className='jessica'>
 
-      <form className={S.form}>
-        <input type="text" name="cliente" id="cliente" value={dadosAntigos.cliente} placeholder={dadosAntigos.cliente} onChange={(e) => handleInputChange(e , "cliente")} className={S.input} />
+        <input type="button"  onClick={openModal} className={S.deletar} value='⛔ Deletar conta ⛔'/>
 
-        <input type="email" name="EMAIL" id="email" value={dadosAntigos.email} placeholder={dadosAntigos.email} onChange={(e) => handleInputChange(e , "email")} className={S.input} />
+        <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className={S.caixaDontLeaveME}>
 
-        <input type="password" name="senha" id="senha" value={dadosAntigos.senha} placeholder={dadosAntigos.senha} onChange={(e) => handleInputChange(e , "senha")} className={S.input} />
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>
+          OLA FULANO 
+        <p> Tem ceterza que deseja nos abandonar?</p>
+        </h2>
+        <button onClick={closeModalAndStay}>JAMAIS</button>
+        <button onClick={closeModalAndGoHome}>SASHAY AWAY</button>
+        </div>
+      </Modal>
+      <Modal
+       isOpen={SashayIsOpen}
+      //  onAfterOpen={afterOpenModal}
+       onRequestClose={closeModal}
+       style={customStyles}
+       contentLabel="Example Modal">
+       <div className={S.caixaSashay}>
+        {status.type === 'sucess'? <p className={S.mensagemDelete}>{status.mensagem}</p>  : ''}
+        <h1> SASHAY AWAY </h1>
+        <p> 'Conta deletada com com sucesso!</p>
+       </div>
 
-        <input type="text" name="planos" id="planos" value={dadosAntigos.planos} placeholder={dadosAntigos.planos} onChange={(e) => handleInputChange(e , "planos")} className={S.input} />
+      </Modal>
+      <Modal
+       isOpen={ShantayIsOpen}
+      //  onAfterOpen={afterOpenModal}
+       onRequestClose={closeModal}
+       style={customStyles}
+       contentLabel="Example Modal">
+       <div className={S.caixaShantay}>
+        <h1> SHANTAY YOU STAY</h1>
+        <p> Agora vai ver um filminho, beijos!</p>
+        <button onClick={closeModal}>Bye Gurl</button>
+       </div>
 
-        <button onClick={requisicao} className={S.alterar}>Alterar dados</button>
-
-        {status.type === 'sucess'? <p className={S.mensagemSucesso}>{status.mensagem}</p> : ''}
-
-      </form>
+      </Modal>
       
     </div>
   )

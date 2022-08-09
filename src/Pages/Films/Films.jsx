@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import Carousel from '../../Components/Carousel/Carousel'
-
+import Header from '../../Components/Header/Header'
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
 import { getAssinaturas } from '../../Services/API'
@@ -23,6 +23,7 @@ const Films = () => {
 
   return (
     <section className={s.paginaFilmes}>
+      <Header/>
       <section className={s.fundoPontilhado}></section>
       <section className={s.brilho}>
         <div className={s.texto}>

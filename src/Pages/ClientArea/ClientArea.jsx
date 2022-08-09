@@ -3,6 +3,7 @@ import AlteraDadosAssinaturas from '../../Components/CrudAssinaturas/alterarDado
 import Header from '../../Components/Header/Header'
 import s from './ClientArea.module.css'
 import user from '../../assets/iconheader/user1.png'
+import DeletarDados from '../../Components/CrudAssinaturas/deletarDados/deletarDados'
 
 
 const ClientArea = () => {
@@ -26,7 +27,7 @@ const ClientArea = () => {
               <AlteraDadosAssinaturas />
               
               <div className={s.contButon}>
-                <input type="button" className={s.deletar} value='⛔ Deletar conta ⛔'/>
+                <DeletarDados/>
               </div>
             </div>
 

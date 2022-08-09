@@ -52,9 +52,13 @@ export const getClientes = async () => {
   }
 };
 export const deletarCliente = async (id) => {
-  const response = await api.delete(`/assinaturas/${id}`);
-  const msg= "Conta excluída com com sucesso"
-  return alert(msg);
+  try {
+    return await api.delete(`/assinaturas/${id}`);
+
+  } catch (error) {
+    console.log(error);
+    return error
+  }
 };
 
 
