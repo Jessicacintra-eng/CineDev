@@ -5,6 +5,7 @@ import Carousel from '../../Components/Carousel/Carousel'
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
 import { getAssinaturas } from '../../Services/API'
+import { useEffect } from 'react'
 
 
 const Films = () => {
