@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const api = axios.create({
   baseURL: "https://cinediva.herokuapp.com",
   headers: {
@@ -7,6 +8,39 @@ const api = axios.create({
   },
 });
 
+export const getAssinaturas = async (id) => {
+  try {
+    const response = await api.get(`/assinaturas/${id}`)
+    const json = await response.data[0]
+    return json
+
+  } catch (error) {
+    console.log(error);
+    return error
+  }
+}
+
+export const adicionaAssinaturas = async (data) => {
+  try {
+    return await api.post('/assinaturas/novaAssinatura', data)
+  } catch (error) {
+    
+    console.log(error);
+    return error
+  }
+};
+
+export const alteraAssianturas = async (id, body) => {
+  try {
+    return await api.put(`/assinaturas/${id}`, body)
+
+  } catch (error) {
+    console.log(error);
+    return error
+  }
+};
+
+//// - jess
 export const getClientes = async () => {
   try {
     const response = await api.get("/assinaturas");
@@ -17,18 +51,6 @@ export const getClientes = async () => {
     console.log(erro);
   }
 };
-
-export const getClientesComID = async (idCliente) => {
-  try {
-    const response = await api.get(`/assinaturas/${idCliente}`);
-    const clientes = await response.data;
-    console.log(clientes)
-    return clientes;
-  } catch (erro) {
-    console.log(erro);
-  }
-};
-
 export const deletarCliente = async (id) => {
   const response = await api.delete(`/assinaturas/${id}`);
   const msg= "Conta excluída com com sucesso"
@@ -77,7 +99,5 @@ export const getFilmes = async () => {
     console.log(erro);
   }
 };
-
-
 
 

@@ -1,0 +1,43 @@
+.container{
+    display: grid;
+    grid-template-rows: auto 150px auto;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+div{
+    display: grid;
+    align-items: flex-start;
+}
+
+.contHeader{
+    margin-bottom: 100px;
+}
+
+.conTitulo{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.titulo{
+    font-size: 50px;
+}
+
+.containerCard{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    justify-items: center;
+}
+
+@media(min-width: 200px) and (max-width: 1000px){
+    .containerCard{
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        gap: 15px;
+    }
+}
+
+

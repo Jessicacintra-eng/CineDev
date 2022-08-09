@@ -1,9 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Carousel from '../../Components/Carousel/Carousel'
+
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
 
+
 const Films = () => {
+  const { id } = useParams()
   return (
     <section className={s.paginaFilmes}>
       <section className={s.fundoPontilhado}></section>
@@ -24,6 +28,7 @@ const Films = () => {
         <Carousel />
       </div>
     </section >
+
   )
 }
 

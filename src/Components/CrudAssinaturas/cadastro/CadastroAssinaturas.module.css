@@ -1,0 +1,130 @@
+.containerForm{
+    width: 400px;
+    height: 440px;
+}
+
+.sucessoCadastro{
+    width: 400px;
+    height: 440px;
+
+    text-align: center;
+    font-family: var(--fontTitulo1);
+    
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: auto auto;
+    gap: 18px;
+
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+    background-color: white;
+    border-radius: 37px;
+
+    color: black;
+}
+
+.textSucesso{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form{
+    width: 400px;
+    height: 440px;
+
+    font-family: var(--fontTitulo1);
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 18px;
+
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+    background-color: white;
+    border-radius: 25px;
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    border: 3px solid #FD4E8B;
+    background-color: white;
+    border-radius: 14px;
+    padding-left: 10px;
+}
+
+.input:hover{
+    filter: brightness(1.3)
+}
+
+.error{
+    font-family: var(--fontTitulo1);
+    font-size: 15px;
+}
+
+.titulo{
+    color: black;
+    font-size: 20px;
+}
+
+.linha{
+    width: 80px;
+    height: 5px;
+    border-radius: 15px;
+    background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%), rgb(232, 135, 193);
+}
+
+.enviar{
+    width: 150px;
+    height: 35px;
+
+    background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+    background-size: 300% 300%;
+    animation: colors 1s ease infinite;
+     
+    border: 0px;
+    border-radius: 15px; 
+    color: white;
+
+    transition: filter 300ms;
+}
+
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+.enviar:hover{
+    filter: brightness(1.3)
+}
+
+a{
+    text-decoration: none;
+    color: #d80f88;
+}
+
+::-webkit-input-placeholder{
+    color: #f7f5f6;
+}
+
+h2{
+    color: black;
+    font-size: 14px;
+}
+
+/* Media Queries */
+

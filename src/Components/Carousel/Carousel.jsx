@@ -1,10 +1,7 @@
 import React from "react";
 import { getFilmes } from "../../Services/API.js";
-import { useParams } from "react-router-dom";
 import { useEffect, useState, useRef } from 'react';
 import  './Carousel.css'
-
-import { func } from "prop-types";
 import CardFilme from "../Card/CardFilme.jsx";
 
 const Teste = () => {

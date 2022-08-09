@@ -18,10 +18,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "react-lorem-ipsum": "^1.4.10",
     "react-router-dom": "^6.3.0",
-    "react-wavify": "^1.6.1",
-    "wavify": "^1.0.0"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

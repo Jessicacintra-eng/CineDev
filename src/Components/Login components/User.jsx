@@ -37,10 +37,10 @@ const User = () => {
           idAutenticado= cliente.id
           return idAutenticado;
         }
-      });
+      })
     console.log(x);
     x.length > 0
-      ?  window.location.href=`/clientArea/${idAutenticado}`
+      ?  window.location.href=`/films/${idAutenticado}`
       : alert("Email ou senha não cadastrados");
   }
 
@@ -105,7 +105,7 @@ const User = () => {
         Esqueci a senha
       </button>
       <div className={s.LinkRegistrar}>
-        <Link to="/Register" className={s.LinkRegistrarI}>
+        <Link to="/cadastro" className={s.LinkRegistrarI}>
         Não tem conta?
           <p className={s.textLinKRegister}> Cadastre-se! </p>
         </Link>
