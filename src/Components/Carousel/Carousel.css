@@ -1,5 +1,7 @@
 .container {
-  max-width: 75vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 .container .carousel {
   display: flex;
@@ -48,30 +50,19 @@
   color: #00a8fb;
 }
 
-.container .carousel .item .info .oldPrice {
-  font-size: 0.8rem;
-  text-decoration: line-through;
-  flex-grow: 1;
-  color: #e81a5d;
-}
-
-.container .carousel .item .info .price {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #ff7e3b;
-}
-
 .container .buttons {
-  width: 100%;
+  width: 30%;
   text-align: center;
 }
 .container .buttons button {
-  background-color: red;
+  background-color: transparent;
   border: none;
-  margin: 0 55px;
+ 
   cursor: pointer;
 }
-.container .buttons button:first-child img {
-  transform: rotate(180deg);
+
+
+.container .buttons img {
+  height: 9vh;
+  width: 16vh;
 }
