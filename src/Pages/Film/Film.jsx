@@ -17,8 +17,10 @@ const Film = () => {
 
         <section className={s.info}>
 
-        <div className={s.titulo}> <h1> As branquelas - 2004 </h1>  </div>
+        <div className={s.contTitulo}>
 
+        <div className={s.titulo}> <h1> As branquelas - 2004 </h1>  </div>
+         </div>
         <div className={s.descricao}> <h2>Descrição:</h2>
         <p> Em As Branquelas, os irmãos Marcus (Marlon Wayans) e Kevin Copeland (Shawn Wayans) são detetives do FBI que estão com problemas no trabalho. A última investigação da dupla foi um grande fracasso e eles estão sob a ameaça de serem demitidos. Quando um plano para sequestrar as mimadas irmãs Brittany (Maitland Ward) e Tiffany Wilson (Anne Dudek) é descoberto, o caso é entregue aos principais rivais dos irmãos Copeland, os agentes Vincent Gomez (Eddie Velez) e Jack Harper (Lochlyn Munro). </p>
         </div>

@@ -42,16 +42,22 @@
     grid-template-rows: 20% 40% 20% 8%;
     grid-column: 3/4;
     grid-row: 3/3;
-    align-items: flex-start;
+    align-items: center;
     
+}
+
+.contTitulo{
+    height: 100%;
+    display:grid;
+    align-items: end;
 }
 
 .titulo{
     width: 100%;
-    height: 50%;
+    height: 60%;
     background: transparent;
     border-radius: 15px;
-    box-shadow: 0 0 20px 5px rgb(245, 63, 178);
+    box-shadow: 0 0 20px 3px rgb(245, 63, 178);
     display: grid;
     align-items: center;
     justify-content: center;
@@ -63,7 +69,7 @@
     height: 80%;
     background: transparent;
     border-radius: 15px;
-    box-shadow: 0 0 20px 5px rgb(245, 63, 178);
+    box-shadow: 0 0 20px 3px rgb(245, 63, 178);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +92,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: start;
 }
 
 .avaliacao{
@@ -97,7 +103,7 @@ h2{
     justify-content:center;
     background: transparent;
     border-radius: 15px;
-    box-shadow:  0 0 20px 5px rgb(245, 63, 178);
+    box-shadow:  0 0 20px 3px rgb(245, 63, 178);
 }
 
 .duracao{
@@ -105,7 +111,7 @@ h2{
     height: 70%;
     background: transparent;
     border-radius: 15px;
-    box-shadow:  0 0 20px 5px rgb(245, 63, 178);
+    box-shadow:  0 0 20px 3px rgb(245, 63, 178);
     display: grid;
     align-items: center;
     justify-content:center
