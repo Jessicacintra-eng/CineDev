@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import CarouselSeries from './CarouselSeries'
+import CarouselSeries from '../../Components/Carousel/CarouselSeries'
 import Header from '../Header/Header'
 import s from "./Series.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
