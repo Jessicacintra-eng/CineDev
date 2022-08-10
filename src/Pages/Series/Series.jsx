@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import CarouselSeries from '../../Components/Carousel/CarouselSeries'
-import Header from '../Header/Header'
+import Header from '../../Components/Header/Header'
 import s from "./Series.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
 import { getAssinaturas } from '../../Services/API'
