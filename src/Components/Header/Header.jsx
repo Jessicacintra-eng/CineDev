@@ -16,7 +16,9 @@ const Header = () => {
           <Link to={`/films/${id}`}>
           <li className={S.li}>FILMES</li>
           </Link>
+          <Link to={`/series/${id}`}>
           <li>SÉRIES</li>
+          </Link>
           {/* <li>ANIMAÇÕES</li> */}
         </ul>
 

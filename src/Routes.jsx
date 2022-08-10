@@ -5,6 +5,7 @@ import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
 import Profile from './Pages/ClientArea/ClientArea'
 import Films from './Pages/Films/Films'
+import Series from './Components/teste/Series'
 import Planos from './Pages/Planos/Planos'
 
 const Routes = () => {
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route path='/planos/:id' element={<Planos />} />
         <Route path='/clientArea/:id' element={<Profile />} />
         <Route path='/films/:id' element={<Films/>}/>
+        <Route path='/series/:id' element={<Series/>}/>
       </Switch>
     </BrowserRouter>
   )

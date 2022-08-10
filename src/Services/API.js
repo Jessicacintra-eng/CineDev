@@ -103,5 +103,16 @@ export const getFilmes = async () => {
     console.log(erro);
   }
 };
+export const getSeries= async () => {
+  try {
+  const url = "https://api.themoviedb.org/3/discover/tv?api_key=79d5524a687b79f90d3ca38d4644f9d6&language=pt-BR&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_keywords=lgbt&with_watch_monetization_types=flatrate&with_status=0&with_type=0"
+  const response = await axios.get(url);
+    const series = response.data.results;
+    console.log(series)
+    return series;
+  } catch (erro) {
+    console.log(erro);
+  }
+};
 
 
