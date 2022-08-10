@@ -5,7 +5,7 @@ import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
 import Profile from './Pages/ClientArea/ClientArea'
 import Films from './Pages/Films/Films'
-import Series from './Components/teste/Series'
+import Series from './Pages/Series/Series'
 import Planos from './Pages/Planos/Planos'
 
 const Routes = () => {
