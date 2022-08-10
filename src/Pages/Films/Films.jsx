@@ -7,7 +7,6 @@ import { BiSearchAlt } from 'react-icons/bi'
 import { getAssinaturas } from '../../Services/API'
 import { useEffect,useState } from 'react'
 
-
 const Films = () => {
   const params = useParams()
   const [cliente, setCliente] = useState([])
