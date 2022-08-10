@@ -21,11 +21,22 @@
   flex-direction: column;
   gap: 20px;
   color: purple;
-}
-.caixaDontLeaveME{
+  text-align: center ;
+  font-size: large;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.caixaDontLeaveME{
+  text-align: center ;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 200px;
 }
 
 
@@ -43,7 +54,20 @@
 
   transition: filter 300ms;
 }
+.buttonModal{
+  width: 150px;
+  height: 25px;
 
+  background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+  background-size: 300% 300%;
+  animation: colors 1s ease infinite;
+   
+  border: 0px;
+  border-radius: 15px; 
+  color: white;
+
+  transition: filter 300ms;
+}
 @keyframes colors {
   0%{
       background-position: 0% 50%;
@@ -55,9 +79,16 @@
       background-position: 0% 50%;
   }
 }
+.buttonModal:hover{
+  filter: brightness(1.3);
+  background: #FF7F5E;
+  cursor:pointer;
 
+}
 .deletar:hover{
-  filter: brightness(1.3)
+  filter: brightness(1.3);
+  background: #FF7F5E;
+  cursor:pointer;
 }
 .buttonDelete{
   display: flex;

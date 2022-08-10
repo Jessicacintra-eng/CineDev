@@ -62,12 +62,12 @@ const DeletarDados = () => {
     }
   }
   const closeModalAndGoHome = ()=>{
-    // requisicao()
+    requisicao()
     setIsOpen(false);
     openSashay(true)
-    // setTimeout(()=>{
-    //   navigate(`/`)
-    // },[2000])  
+    setTimeout(()=>{
+      navigate(`/`)
+    },[2000])  
   }
 
   return (
@@ -85,11 +85,11 @@ const DeletarDados = () => {
         <div className={S.caixaDontLeaveME}>
 
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>
-          OLA FULANO 
+          Hey!
         <p> Tem ceterza que deseja nos abandonar?</p>
         </h2>
-        <button onClick={closeModalAndStay}>JAMAIS</button>
-        <button onClick={closeModalAndGoHome}>SASHAY AWAY</button>
+        <button className={S.buttonModal} onClick={closeModalAndStay}>JAMAIS</button>
+        <button className={S.buttonModal}onClick={closeModalAndGoHome}>SASHAY AWAY</button>
         </div>
       </Modal>
       <Modal
@@ -114,7 +114,7 @@ const DeletarDados = () => {
        <div className={S.caixaShantay}>
         <h1> SHANTAY YOU STAY</h1>
         <p> Agora vai ver um filminho, beijos!</p>
-        <button onClick={closeModal}>Bye Gurl</button>
+        <button className={S.buttonModal} onClick={closeModal}>Bye Gurl</button>
        </div>
 
       </Modal>

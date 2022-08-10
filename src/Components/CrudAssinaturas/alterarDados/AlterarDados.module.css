@@ -54,7 +54,8 @@
 }
 
 .alterar:hover{
-    filter: brightness(1.3)
+    filter: brightness(1.3);
+    cursor: pointer;
 }
 
 .mensagemSucesso{
