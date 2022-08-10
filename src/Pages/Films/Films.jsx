@@ -5,7 +5,6 @@ import Carousel from '../../Components/Carousel/Carousel'
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
 
-
 const Films = () => {
   const { id } = useParams()
   return (
