@@ -49,28 +49,36 @@
 .titulo{
     width: 100%;
     height: 70%;
-    background: #f42d9a;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px rgb(245, 63, 178);
     display: grid;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .descricao{
     width: 100%;
     height: 80%;
-    background: cadetblue;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px rgb(245, 63, 178);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center
+    justify-content:center;
 }
 
 .descricao p{
      font-size: 15px;
+     color: white;
+     width: 90%;
 }
 
 h2{
     font-size: 18px;
+    color: white;
 }
 .infos_menores{
     width: 100%;
@@ -84,16 +92,20 @@ h2{
 .avaliacao{
     width: 40%;
     height: 80%;
-    background: violet;
     display: grid;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow:  0 0 20px 5px rgb(245, 63, 178);
 }
 
 .duracao{
     width: 40%;
     height: 80%;
-    background: wheat;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow:  0 0 20px 5px rgb(245, 63, 178);
     display: grid;
     align-items: center;
     justify-content:center
@@ -112,8 +124,8 @@ h2{
 }
 
 .botaoAssistir button {
-    height: 30px;
-    width: 120px;
+    height: 50px;
+    width: 180px;
     background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
     background-size: 300% 300%;
     animation: colors 1s ease infinite;

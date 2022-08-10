@@ -27,7 +27,7 @@ const Film = () => {
 
         <div className={s.duracao}> <h2> Duração: 1h 49min </h2> </div>
 
-        <div className={s.avaliacao}> <h2> Avaliação: </h2> </div>
+        <div className={s.avaliacao}> <h2> Avaliação: Problemático</h2> </div>
 
         </div> 
         <div className={s.botaoAssistir}> 
