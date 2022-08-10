@@ -6,9 +6,33 @@ import Button from "../Button/Button.jsx";
 import s from "./User.module.css";
 import { Link } from "react-router-dom";
 import Claquete from "../../assets/Claquete.svg";
+import Modal from 'react-modal';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+Modal.setAppElement('#root');
 
 const User = () => {
   const navigate = useNavigate()
+  const [modalIsOpen, setIsOpen] = useState(false);
+  function openModal() {
+    setIsOpen(true);
+    setTimeout(()=>{
+      setIsOpen(false);
+    },[3000])
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   const [DadosLogin, setDadosLogin] = useState({
     Email: "",
@@ -26,6 +50,7 @@ const User = () => {
     };
     request();
   }, [params.assinaturas]);
+  
   let idAutenticado
   function validaDadosComBD() {
     
@@ -99,14 +124,31 @@ const User = () => {
         Entrar
       </button>
       <button
-        onClick={(event) => {
-          event.preventDefault();
-          alert("OI");
-        }}
+        onClick={()=>{
+          alert("Se você estiver cadastrado recebera um email!")
+        }
+          // openModal
+        }
         className={s.LinkSenha}
       >
         Esqueci a senha
       </button>
+      <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className={s.caixaDontLeaveME}>
+
+        <h2>
+          Hey!
+        <p> Se você estiver cadastrado recebera um email!</p>
+        </h2>
+        <button className={s.buttonModal} onClick={closeModal}>OK</button>
+        </div>
+      </Modal>
       <div className={s.LinkRegistrar}>
         <Link to="/cadastro" className={s.LinkRegistrarI}>
         Não tem conta?

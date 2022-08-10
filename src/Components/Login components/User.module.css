@@ -62,7 +62,16 @@
   text-decoration: none;
   text-align: center; 
 }
-.LinkSenha:hover,.textLinKRegister:hover{
+.LinkSenha:hover{
+  text-decoration: none;
+  cursor: pointer;
+  background: none ;
+  box-shadow: none;
+  text-shadow: 1px 1px 1px red;
+  color: gold;
+  border: none;
+}
+.textLinKRegister:hover{
   text-shadow: 1px 1px 1px red;
   color: gold;
 }
