@@ -71,7 +71,7 @@ const DeletarDados = () => {
   }
 
   return (
-    <div className='jessica'>
+    <div className={S.buttonDelete}>
 
         <input type="button"  onClick={openModal} className={S.deletar} value='⛔ Deletar conta ⛔'/>
 

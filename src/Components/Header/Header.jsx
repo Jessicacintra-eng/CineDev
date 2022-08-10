@@ -9,30 +9,31 @@ import { BiSearchAlt } from 'react-icons/bi'
 
 const Header = () => {
   const { id } = useParams();
+  
   return (
     <div className={S.container}>
       <div className={S.contLogo}>
-        <img className={S.logotipo} src={logotipo} alt="logotipo" />
+        <Link to={`/`}>
+        <img className={S.logotipo} src={logotipo} alt="logotipo"/> 
+        </Link>
       </div>
 
-      <ul className={S.containerLista}>
-        <Link className={S.li} to={`/films/${id}`}>
-          <li className={S.li}>FILMES</li>
+      
+        <Link className={`${S.li} ${S.filmes}`} to={`/films/${id}`}>
+       FILMES
         </Link>
-        <Link  className={S.li} to={`/series/${id}`}>
-          <li className={S.li}>SÉRIES</li>
+        <Link  className={`${S.li} ${S.series}`} to={`/series/${id}`}>
+          SÉRIES
         </Link>
-        {/* <li>ANIMAÇÕES</li> */}
-      </ul>
+      
       <div class={S.buscarFilme}>
-        <form>
-          <p> Buscar </p>
-          <input type="text" placeholder="" className={S.inputBuscar} />
+        
+          <input type="text" placeholder="Buscar" className={S.inputBuscar} />
           <button type="sumbit" className={S.buttonBuscar}>
             {" "}
             <BiSearchAlt />{" "}
           </button>
-        </form>
+        
       </div>
 
       <div className={S.containerUser}>

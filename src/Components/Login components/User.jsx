@@ -58,7 +58,7 @@ const User = () => {
     <form>
       <img src={Claquete} className={s.imagemClaquete} alt="" />
       <div className={s.divEmail}>
-        <label htmlFor="email">E-mail:</label>
+        {/* <label htmlFor="email">E-mail:</label> */}
         <input
           type="email"
           name="email"
@@ -72,7 +72,7 @@ const User = () => {
         />
       </div>
       <div className={s.divSenha}>
-        <label htmlFor="password">Senha:</label>
+        {/* <label htmlFor="password">Senha:</label> */}
         <input
           type="password"
           value={DadosLogin.Senha}

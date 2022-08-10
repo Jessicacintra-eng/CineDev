@@ -13,6 +13,7 @@ const ClientArea = () => {
         <Header/>
       </div>  
 
+      <section className={s.fundoPontilhado}></section>
       <section className={s.container}>
         <section className={s.secPerfil}>
             <div className={s.contImg}><img className={s.userImg} src={user} alt="" />
@@ -21,15 +22,13 @@ const ClientArea = () => {
         </section>
 
         <section className={s.conteinerForm}>
-            <h1 className={s.titulo}>MINHA CONTA</h1>
 
             <div className={s.contForm}>
+            <h1 className={s.titulo}>MINHA CONTA</h1>
               <AlteraDadosAssinaturas />
-              
-              <div className={s.contButon}>
                 <DeletarDados/>
-              </div>
             </div>
+              
 
         </section>
       </section>

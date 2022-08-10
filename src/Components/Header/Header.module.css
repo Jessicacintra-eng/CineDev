@@ -1,13 +1,14 @@
 .container{
     position: absolute;
     width: 100%;
-    height: 90px;
-    background:  linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+    height: 95px;
+    /* background:  linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193)); */
+    background-color: rgb(63, 19, 19) ;
     background-size: 300% 300%;
     animation: colors 3s ease infinite;
     
     display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
+    grid-template-columns: 20% 20% 20% 30% 10%;
     grid-template-rows: 90px;
 
     align-items: center;
@@ -28,18 +29,51 @@
 
 .logotipo{
     width: 200px;
+    height: inherit;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.inputBuscar{
+    padding: 5px 10px;
+    text-align: center;
+    width: 200px;
+}
+.buttonBuscar{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background:#f42d9a;
+}
+.buscarFilme{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+.buttonBuscar:hover{
+    transform: none;
+    background-color: rgb(248, 93, 186);
+    cursor: pointer;
+}
+.filmes{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 180px;
+}
+.series{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .containerLista{
-    display: grid;
-
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-
-    align-items: center;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px;
+    display:flex;
 }
 
 .li{
@@ -50,16 +84,26 @@
     font-size: 25px;
     font-weight: 400;
     transition: all 0.3s;
+    cursor: pointer ;
 }
 .li:hover{
     transform: scale(1.1);
     text-shadow: 2px 2px 2px rgb(229, 51, 242);
 }
+.logotipo:hover{
+    transform: scale(1.1);
+    border-radius: 35%;
+    box-shadow: 2px 2px 2px rgba(249, 243, 184);
+    background-color: rgba(249, 242, 184, 0.708);
+}
 
 .containerUser{
     height: 60px;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    grid-column: 5/6;
+    grid-row: 1/2;
 }
 
 .containerimg{
@@ -106,6 +150,7 @@
 
 .seta:hover{
     filter: brightness(1.2);
+    cursor: pointer;
 }
 
 .dropdown{

@@ -37,12 +37,12 @@ const CarouselSeries= () => {
         </div>
       <div className="carousel" ref={carousel}>
         {produtos.map((item) => {
-          const { id, name, release_date,vote_average, poster_path, overview} = item;
+          const { id, name, first_air_date ,vote_average, poster_path, overview} = item;
           return (
             <CardFilme
             id = {id}
             nomeDoFilme = {name} 
-            // anoLancamento = {release_date.split("-").slice(0,1)} 
+            anoLancamento = {first_air_date.split("-").slice(0,1)} 
             urlCartaz = {poster_path} 
             notas = {vote_average}
             descricaoDoFilme= {overview}
