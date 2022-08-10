@@ -42,6 +42,7 @@ const User = () => {
       })
     console.log(x);
     x.length > 0
+
       ?  navigate(`/films/${idAutenticado}`)
       : alert("Email ou senha não cadastrados");
   }

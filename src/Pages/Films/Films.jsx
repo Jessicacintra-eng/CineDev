@@ -4,9 +4,22 @@ import Carousel from '../../Components/Carousel/Carousel'
 
 import s from "./Films.module.css"
 import { BiSearchAlt } from 'react-icons/bi'
+import { getAssinaturas } from '../../Services/API'
+import { useEffect,useState } from 'react'
 
 const Films = () => {
-  const { id } = useParams()
+  const params = useParams()
+  const [cliente, setCliente] = useState([])
+
+  async function requisicao() {
+    const response = await getAssinaturas(params.id)
+    setProdutos(response)
+  }
+
+  useEffect(() => {
+    requisicao()
+  }, [params.id])
+
   return (
     <section className={s.paginaFilmes}>
       <section className={s.fundoPontilhado}></section>
