@@ -8,6 +8,7 @@ import Films from './Pages/Films/Films'
 import Series from './Pages/Series/Series'
 import Planos from './Pages/Planos/Planos'
 import Film from './Pages/Film/Film'
+import Serie from './Pages/Serie/Serie'
 
 const Routes = () => {
   return (
@@ -20,7 +21,8 @@ const Routes = () => {
         <Route path='/clientArea/:id' element={<Profile />} />
         <Route path='/films/:id' element={<Films/>}/>
         <Route path='/series/:id' element={<Series/>}/>
-        <Route path='/film' element={<Film/>} />
+        <Route path='/film/:idFilme' element={<Film/>} />
+        <Route path='/serie/:idSerie' element={<Serie/>}/>
       </Switch>
     </BrowserRouter>
   )

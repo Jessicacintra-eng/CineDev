@@ -115,4 +115,27 @@ export const getSeries= async () => {
   }
 };
 
+export const getSeriesID= async (idSerie) => {
+  try {
+const url = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=79d5524a687b79f90d3ca38d4644f9d6&language=pt-BR`
+  const response = await axios.get(url);
+    const series = response.data;
+    console.log(series)
+    return series;
+  } catch (erro) {
+    console.log(erro);
+  }
+};
 
+export const getFilmesID= async (idFilme) => {
+  try {
+  const url = `https://api.themoviedb.org/3/movie/${idFilme}?api_key=79d5524a687b79f90d3ca38d4644f9d6&language=pt-BR`
+  const response = await axios.get(url);
+    const filme = response.data;
+    console.log(filme)
+    return filme;
+  } catch (erro) {
+    console.log(erro);
+  }
+};
+// getFilmesID("846250")

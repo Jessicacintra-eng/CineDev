@@ -3,8 +3,10 @@ import { getSeries } from "../../Services/API.js";
 import { useEffect, useState, useRef } from 'react';
 import  './Carousel.css'
 import CardFilme from "../Card/CardFilme.jsx";
+import { useNavigate } from "react-router-dom";
 
 const CarouselSeries= () => {
+  const navigate = useNavigate()
   const carousel = useRef(null);
   const [produtos, setProdutos] = useState([]);
   useEffect(() => {
@@ -46,7 +48,7 @@ const CarouselSeries= () => {
             urlCartaz = {poster_path} 
             notas = {vote_average}
             descricaoDoFilme= {overview}
-            details={(e)=>{e.preventDefault(); alert("oi")}}
+            details={(e)=>{e.preventDefault();navigate(`/serie/${id}`)}}
             />
           );
         })}

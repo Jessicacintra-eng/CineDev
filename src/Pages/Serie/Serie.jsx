@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../Components/Header/Header";
-import s from "./Film.module.css";
-import { getFilmesID } from "../../Services/API";
+import s from "./Serie.module.css";
+import { getSeriesID } from "../../Services/API";
 import { useParams } from "react-router-dom";
 
-const Film = () => {
+const Serie = () => {
   const parametro = useParams();
-  // console.log(parametro.idFilme)
-  const [filme, setFilme] = useState(" ");
+  // console.log(parametro.idSerie)
+  const [serie, setSerie] = useState(" ");
 
   useEffect(() => {
     const request = async () => {
-      const response = await getFilmesID(parametro.idFilme.toString());
+      const response = await getSeriesID(parametro.idSerie.toString());
       console.log(response);
-      setFilme(response);
+      setSerie(response);
     };
     request();
   }, [parametro]);
-  // console.log(filme);
+  console.log(serie);
 
   return (
-    <main className={s.paginaFilme}>
+    <main className={s.paginaserie}>
       <Header />
 
           <section className={s.poster}>
             <img
               className={s.imagem}
-              src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+              src={`https://image.tmdb.org/t/p/original/${serie.poster_path}`}
               alt=""
             />
           </section>
@@ -34,17 +34,17 @@ const Film = () => {
 
         <div className={s.contTitulo}>
 
-         <div className={s.titulo}> <h1> {filme.title} - {filme.release_date}  </h1>  </div>
+         <div className={s.titulo}> <h1> {serie.title} - {serie.release_date}  </h1>  </div>
           </div>
          <div className={s.descricao}> <h2>Descrição:</h2>
-         <p> {filme.overview}</p>
+         <p> {serie.overview}</p>
          </div>
 
        <div className={s.infos_menores}>
 
-       <div className={s.duracao}> <h2> Duração: {filme.runtime} min</h2> </div>
+       <div className={s.duracao}> <h2> Duração do ep: {serie.episode_run_time} min</h2> </div>
 
-         <div className={s.avaliacao}> <h2> Avaliação: {filme.vote_average}</h2> </div>
+         <div className={s.avaliacao}> <h2> Avaliação: {serie.vote_average}</h2> </div>
 
         </div> 
         <div className={s.botaoAssistir}> 
@@ -55,4 +55,4 @@ const Film = () => {
   );
 };
 
-export default Film;
+export default Serie;

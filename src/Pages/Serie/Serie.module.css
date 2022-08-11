@@ -1,0 +1,156 @@
+.paginaSerie{
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 95px 30px;
+}
+
+.poster img {
+  height: 75vh;
+  width: 50vh;
+}
+
+.poster {
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 3/3;
+  justify-content: center;
+}
+
+@keyframes neon {
+  from {
+      filter: drop-shadow(0 0 0 var(--cor-neon))
+  }
+  to {
+      filter: drop-shadow(0 0 30px var(--cor-neon));
+  }
+}
+
+.poster img{
+  animation: neon 2s alternate infinite ease-in-out;
+}
+
+.poster img{
+  --cor-neon: #f42d9a;
+}
+
+.info {
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% 40% 20% 8%;
+  grid-column: 3/4;
+  grid-row: 3/3;
+  align-items: center;
+  
+}
+
+.contTitulo{
+  height: 100%;
+  display:grid;
+  align-items: end;
+}
+
+.titulo{
+  width: 100%;
+  height: 60%;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 3px rgb(245, 63, 178);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.descricao{
+  width: 100%;
+  min-height: 80%;
+  height: fit-content;
+  padding-bottom: 1rem ;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 3px rgb(245, 63, 178);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.descricao p{
+   font-size: 15px;
+   color: white;
+   width: 90%;
+}
+
+h2{
+  font-size: 18px;
+  color: white;
+}
+.infos_menores{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.avaliacao{
+  width: 40%;
+  height: 70%;
+  display: grid;
+  align-items: center;
+  justify-content:center;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow:  0 0 20px 3px rgb(245, 63, 178);
+}
+
+.duracao{
+  width: 40%;
+  height: 70%;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow:  0 0 20px 3px rgb(245, 63, 178);
+  display: grid;
+  align-items: center;
+  justify-content:center
+}
+
+@keyframes colors {
+  0%{
+      background-position: 0% 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
+.botaoAssistir button {
+  height: 50px;
+  width: 180px;
+  background: linear-gradient(90.27deg, rgb(253, 78, 139) 0.71%, #FF7F5E 99.87%, rgb(232, 135, 193));
+  background-size: 300% 300%;
+  animation: colors 1s ease infinite;
+   
+  border: 0px;
+  border-radius: 15px; 
+  color: white;
+
+  transition: filter 300ms;
+}
+
+.botaoAssistir{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
