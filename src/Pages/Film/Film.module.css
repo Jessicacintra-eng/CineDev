@@ -1,7 +1,9 @@
+
 .paginaFilme{
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 95px 30px;
+    font-family: 'DynaPuff', cursive;
 }
 
 .poster img {
@@ -43,13 +45,14 @@
     grid-column: 3/4;
     grid-row: 3/3;
     align-items: center;
+    justify-content: start;
     
 }
 
 .contTitulo{
     height: 100%;
     display:grid;
-    align-items: end;
+    align-items: start;
 }
 
 .titulo{
@@ -78,15 +81,23 @@
     justify-content:center;
 }
 
+.descricao h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #f42d9a;
+}
+
 .descricao p{
-     font-size: 15px;
+     font-size: 13px;
      color: white;
      width: 90%;
+     text-align: center;
 }
 
 h2{
     font-size: 18px;
     color: white;
+    text-align: center;
 }
 .infos_menores{
     width: 100%;
@@ -94,7 +105,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
 }
 
 .avaliacao{
@@ -111,12 +122,12 @@ h2{
 .duracao{
     width: 40%;
     height: 70%;
+    display: grid;
+    align-items: center;
+    justify-content:center;
     background: transparent;
     border-radius: 15px;
     box-shadow:  0 0 20px 3px rgb(245, 63, 178);
-    display: grid;
-    align-items: center;
-    justify-content:center
 }
 
 @keyframes colors {
@@ -151,6 +162,11 @@ h2{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.destaque{
+    color: #f42d9a;
+    font-size: 20px;
 }
 
 
