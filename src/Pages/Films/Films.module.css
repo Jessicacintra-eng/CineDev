@@ -31,6 +31,7 @@
   }
 .paginaFilmes{
     z-index: 2;
+    font-family: 'DynaPuff', cursive;
 }
 .brilho{
     z-index: 2;

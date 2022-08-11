@@ -36,18 +36,21 @@ const Serie = () => {
 
          <div className={s.titulo}> <h1> {serie.name} - {serie.first_air_date}  </h1>  </div>
           </div>
-         <div className={s.descricao}> <h2>Descrição:</h2>
+         <div className={s.descricao}>
          <p> {serie.overview}</p>
          </div>
 
        <div className={s.infos_menores}>
 
-       <div className={s.temporadas}> <h2> Temporadas: {serie.number_of_seasons} </h2>
+       <div className={s.temporadas}> <h2> Temporadas  </h2>
+       <h2 className={s.destaque}>{serie.number_of_seasons} </h2>
          </div>
-         <div className={s.episodios}> <h2> Número de Episódios: {serie.number_of_episodes} </h2> </div>
+         <div className={s.episodios}> <h2> Número de Episódios  </h2> 
+         <h2 className={s.destaque}> {serie.number_of_episodes} </h2></div>
         
-         <div className={s.avaliacao}> <h2> Avaliação: {serie.vote_average}</h2> </div>
-
+         <div className={s.avaliacao}> <h2> Avaliação </h2>
+         <h2 className={s.destaque}> {serie.vote_average} </h2> </div>
+         
         </div> 
         <div className={s.botaoAssistir}> 
          <button> Assistir </button>

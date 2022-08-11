@@ -1,7 +1,9 @@
+
 .paginaFilme{
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 95px 30px;
+    font-family: 'DynaPuff', cursive;
 }
 
 .poster img {
@@ -79,15 +81,23 @@
     justify-content:center;
 }
 
+.descricao h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #f42d9a;
+}
+
 .descricao p{
-     font-size: 15px;
+     font-size: 13px;
      color: white;
      width: 90%;
+     text-align: center;
 }
 
 h2{
     font-size: 18px;
     color: white;
+    text-align: center;
 }
 .infos_menores{
     width: 100%;
@@ -152,6 +162,11 @@ h2{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.destaque{
+    color: #f42d9a;
+    font-size: 20px;
 }
 
 

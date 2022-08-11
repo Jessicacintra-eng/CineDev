@@ -1,7 +1,9 @@
+ 
 .paginaSerie{
   display: grid;
   grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 95px 30px;
+  font-family: 'DynaPuff', cursive;
 }
 
 .poster img {
@@ -79,15 +81,24 @@
 }
 
 .descricao p{
-   font-size: 15px;
+   font-size: 13px;
    color: white;
    width: 90%;
+   text-align: center;
 }
 
 h2{
   font-size: 14px;
   color: white;
+  text-align: center;
 }
+
+.descricao h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #f42d9a;
+}
+
 .infos_menores{
   width: 100%;
   height: 80%;
@@ -130,9 +141,6 @@ h2{
   justify-content:center
 }
 
-.episodios h2{
-  margin-left: 28px;
-}
 @keyframes colors {
   0%{
       background-position: 0% 50%;
@@ -167,4 +175,12 @@ h2{
   align-items: center;
 }
 
+.destaque{
+  color: #f42d9a;
+  font-size: 20px;
+}
 
+h1{
+  color: #f42d9a;
+  
+}

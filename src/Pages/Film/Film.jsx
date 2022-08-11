@@ -36,15 +36,17 @@ const Film = () => {
 
          <div className={s.titulo}> <h1> {filme.title} - {filme.release_date}  </h1>  </div>
           </div>
-         <div className={s.descricao}> <h2>Descrição:</h2>
+         <div className={s.descricao}> 
          <p> {filme.overview}</p>
          </div>
 
        <div className={s.infos_menores}>
 
-       <div className={s.duracao}> <h2> Duração: {filme.runtime} min</h2> </div>
+       <div className={s.duracao}> <h2> Duração </h2> 
+       <h2 className={s.destaque}> {filme.runtime} min </h2> </div>
 
-         <div className={s.avaliacao}> <h2> Avaliação: {filme.vote_average}</h2> </div>
+         <div className={s.avaliacao}> <h2> Avaliação </h2>
+           <h2 className={s.destaque}> {filme.vote_average} </h2> </div>
 
         </div> 
         <div className={s.botaoAssistir}> 
