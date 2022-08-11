@@ -85,7 +85,7 @@
 }
 
 h2{
-  font-size: 18px;
+  font-size: 14px;
   color: white;
 }
 .infos_menores{
@@ -98,7 +98,7 @@ h2{
 }
 
 .avaliacao{
-  width: 40%;
+  width: 25%;
   height: 70%;
   display: grid;
   align-items: center;
@@ -108,8 +108,19 @@ h2{
   box-shadow:  0 0 20px 3px rgb(245, 63, 178);
 }
 
-.duracao{
-  width: 40%;
+.temporadas{
+  width: 25%;
+  height: 70%;
+  display: grid;
+  align-items: center;
+  justify-content:center;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow:  0 0 20px 3px rgb(245, 63, 178);
+}
+
+.episodios{
+  width: 25%;
   height: 70%;
   background: transparent;
   border-radius: 15px;
@@ -119,6 +130,9 @@ h2{
   justify-content:center
 }
 
+.episodios h2{
+  margin-left: 28px;
+}
 @keyframes colors {
   0%{
       background-position: 0% 50%;

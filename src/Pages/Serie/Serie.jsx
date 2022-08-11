@@ -20,7 +20,7 @@ const Serie = () => {
   console.log(serie);
 
   return (
-    <main className={s.paginaserie}>
+    <main className={s.paginaSerie}>
       <Header />
 
           <section className={s.poster}>
@@ -34,7 +34,7 @@ const Serie = () => {
 
         <div className={s.contTitulo}>
 
-         <div className={s.titulo}> <h1> {serie.title} - {serie.release_date}  </h1>  </div>
+         <div className={s.titulo}> <h1> {serie.name} - {serie.first_air_date}  </h1>  </div>
           </div>
          <div className={s.descricao}> <h2>Descrição:</h2>
          <p> {serie.overview}</p>
@@ -42,8 +42,10 @@ const Serie = () => {
 
        <div className={s.infos_menores}>
 
-       <div className={s.duracao}> <h2> Duração do ep: {serie.episode_run_time} min</h2> </div>
-
+       <div className={s.temporadas}> <h2> Temporadas: {serie.number_of_seasons} </h2>
+         </div>
+         <div className={s.episodios}> <h2> Número de Episódios: {serie.number_of_episodes} </h2> </div>
+        
          <div className={s.avaliacao}> <h2> Avaliação: {serie.vote_average}</h2> </div>
 
         </div> 
